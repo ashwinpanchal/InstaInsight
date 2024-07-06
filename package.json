@@ -6,11 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --watch=false",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "format": "npx prettier --write .",
-    "server:env": "sh environmentFile.sh"
+    "server:env": "sh environmentFile.sh",
+    "postinstall": "yarn server:env && cd server && yarn install"
   },
   "private": true,
   "dependencies": {
