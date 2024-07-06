@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "server:env": "sh environmentFile.sh"
   },
   "private": true,
   "dependencies": {
