@@ -1,7 +1,7 @@
 import { Document, model, Schema } from 'mongoose';
 import bcrypt from 'bcrypt';
 
-import { UserInterface } from './interfaces/userInterface';
+import { UserInterface } from './interfaces/user.interface';
 
 interface IUser extends Document, UserInterface {}
 

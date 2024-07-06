@@ -1,6 +1,6 @@
 import { connect } from 'mongoose';
 
-import serverConfig from './serverConfig';
+import serverConfig from './server.config';
 
 const DATABASE_URL: string = serverConfig.DATABASE_URL || 'default';
 

@@ -1,7 +1,7 @@
 import express, { Express } from 'express';
 
-import serverConfig from './config/serverConfig';
-import { mongoConnect } from './config/dbConfig';
+import serverConfig from './config/server.config';
+import { mongoConnect } from './config/db.config';
 
 const PORT = serverConfig.PORT || '3000';
 
