@@ -22,6 +22,7 @@ else
     cd $dir || exit
     echo "PORT=" > .env
     echo 'DATABASE_URL=""' >> .env
+    echo 'JWT_TOKEN=""' >> .env
     echo ".env file has been created in the $dir directory"
 fi
 

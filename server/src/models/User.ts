@@ -1,9 +1,8 @@
-import { Document, model, Schema } from 'mongoose';
+import { model, Schema } from 'mongoose';
 import bcrypt from 'bcrypt';
 
-import { UserInterface } from './interfaces/user.interface';
-
-interface IUser extends Document, UserInterface {}
+import { IUser } from './interfaces/user.interface';
+import serverConfig from '../config/server.config';
 
 const userSchema: Schema = new Schema<IUser>(
   {
@@ -20,7 +19,7 @@ const userSchema: Schema = new Schema<IUser>(
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   const password: string = this.password as string;
-  const saltRounds = 9;
+  const saltRounds = serverConfig.BCRYPT_SALT_ROUNDS;
   this.password = await bcrypt.hash(password, saltRounds);
   next();
 });
