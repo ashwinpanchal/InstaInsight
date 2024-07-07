@@ -20,9 +20,12 @@ then
     exit
 else
     cd $dir || exit
-    echo "PORT=" > .env
-    echo 'DATABASE_URL=""' >> .env
-    echo 'JWT_TOKEN=""' >> .env
+    {
+        echo "PORT=3000"
+        echo 'DATABASE_URL="PASTE_MONGO_DB_CONNECTION_URL"'
+        echo 'JWT_TOKEN="SECRET"'
+        echo 'BCRYPT_SALT_ROUNDS="9"'
+    } >> .env
     echo ".env file has been created in the $dir directory"
 fi
 
