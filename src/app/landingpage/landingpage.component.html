@@ -1,0 +1,20 @@
+<div class="dashboard-container">
+  <mat-grid-list cols="4" rowHeight="100%" gutterSize="20px">
+    <mat-grid-tile colspan="1">
+      <div class="account-info" *ngIf="!loading">
+        <img
+          [src]="'../../assets/' + accountInfo.image"
+          alt="Profile Picture"
+          class="profile-pic" />
+        <h4>{{ accountInfo.name }}</h4>
+        <p>{{ accountInfo.description }}</p>
+      </div>
+      <mat-spinner *ngIf="loading"></mat-spinner>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+      <div class="grid-content">
+        <app-spaces />
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

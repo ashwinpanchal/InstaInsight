@@ -46,3 +46,6 @@ Thumbs.db
 
 server/.env
 server/node_modules
+
+src/assets/company.jpg
+src/assets/grid.jpg

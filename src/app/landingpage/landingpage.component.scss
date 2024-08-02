@@ -1,0 +1,24 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+}
+
+.account-info {
+  text-align: center;
+  height: 100%;
+  width: 80%;
+}
+
+.profile-pic {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  overflow: hidden;
+  width: 65%;
+  margin-bottom: 10px;
+}
+
+.grid-content {
+  height: 100%;
+  width: 100%;
+}

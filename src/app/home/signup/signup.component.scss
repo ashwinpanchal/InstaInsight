@@ -1,0 +1,49 @@
+.signup-card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.login-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sing-in-button {
+  margin-left: 5px;
+}
+
+.name-field {
+  width: 48%;
+}
+
+.error {
+  color: red;
+}
+
+.signup-heading {
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.submit-button {
+  width: 70%;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+}
