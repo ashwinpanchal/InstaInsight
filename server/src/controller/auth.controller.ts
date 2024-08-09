@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import passport from 'passport';
 import jwt from 'jsonwebtoken';
 
 import { UserService } from '../service/user.service';
@@ -22,7 +21,8 @@ const registerUser = async (req: Request, res: Response) => {
       error: errors,
     });
   }
-  const { firstName, lastName, email, password }: UserInterface = req.body;
+  const { firstName, lastName, email, password, userType }: UserInterface =
+    req.body;
   try {
     const user = await userService.getUserByEmail(email);
     if (user)
@@ -37,6 +37,7 @@ const registerUser = async (req: Request, res: Response) => {
       lastName,
       email,
       password,
+      userType,
     });
 
     const payload = { id: newUser.id, email: newUser.email };

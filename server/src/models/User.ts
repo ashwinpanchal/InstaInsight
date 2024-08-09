@@ -1,15 +1,20 @@
 import { model, Schema } from 'mongoose';
 import bcrypt from 'bcrypt';
 
-import { IUser } from './interfaces/user.interface';
+import { IUser, UserType } from './interfaces/user.interface';
 import serverConfig from '../config/server.config';
 
 const userSchema: Schema = new Schema<IUser>(
   {
     firstName: { type: String, required: true },
-    lastName: { type: String },
+    lastName: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    userType: {
+      type: String,
+      enum: Object.values(UserType),
+      default: UserType.USER,
+    },
   },
   {
     timestamps: true,
